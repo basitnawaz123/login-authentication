@@ -38,11 +38,11 @@ const RegistrationScreen = () => {
         password: values.password,
       })
       .then((res) => {
-        console.log(res);
         if (res.data.success) {
           setLoading(false);
           setOpen(true);
           setError(res.data.message);
+          navigate("/login");
         }
       })
       .catch((err) => {
